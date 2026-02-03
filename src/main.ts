@@ -68,7 +68,7 @@ console.log("");
 if (inventory.length > 0) {
     inventory.forEach(function (product) {
     console.log(product.displayDetails());
-    const finalPrice = calculateTax(product);
+    const finalPrice: number = calculateTax(product);
     console.log(`The final price of ${product.name} with tax is $${finalPrice.toFixed(2)}`);
     console.log("");
     })
@@ -79,7 +79,7 @@ if (inventory.length > 0) {
 // to sort catalog by price, uncomment lines 80-85
 console.log("_______________________________________________________");
 console.log("________________CATALOG SORTED BY PRICE________________");
-const sortedByPrice = sortByProperty(inventory,'price');
+const sortedByPrice: Product[] = sortByProperty(inventory,'price');
 sortedByPrice.forEach(function(product) {
     console.log(product.displayDetails());
 });
@@ -87,7 +87,7 @@ sortedByPrice.forEach(function(product) {
 // to sort catalog by name, uncomment lines 88-93
 console.log("______________________________________________________");
 console.log("________________CATALOG SORTED BY NAME________________");
-const sortedByName = sortByProperty(inventory,'name');
+const sortedByName: Product[] = sortByProperty(inventory,'name');
 sortedByName.forEach(function(product) {
     console.log(product.displayDetails());
 });
